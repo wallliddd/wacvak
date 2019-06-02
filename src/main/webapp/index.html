@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alle links</title>
+<style>
+body {
+    background-image: url("silver.jpg");
+}
+.midden {
+	width: 70%;
+	margin: 0 auto;
+	height: 30%;
+}
+
+.dropbtn {
+	background-color: #ff1a1a;
+	color: #f1f1f1;
+	padding: 20px;
+	font-size: 20px;
+	cursor: pointer;
+	width: 1000px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	background-color: #ff1a1a;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: #ff1a1a;
+	padding: 20px;
+	font-size: 20px;
+	text-decoration: none;
+	display: block;
+	width: 960px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+}
+
+.dropdown a:hover {
+	background-color: #ff4d4d
+}
+
+.show {
+	display: block;
+}
+
+.banner {
+	width: 70%;
+	margin: 0 auto;
+	height: 50%;
+}
+</style>
+</head>
+<body>
+	<div class="banner">
+		<img
+			src="afb/banner.png" height="350" width="1000">
+	</div>
+	<div class="midden">
+		<div class="dropdown">
+			<button onclick="menu()" class="dropbtn">Alle practicum
+				verwijzingen</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="rekenmachine.html">Les 2, practicum 5, rekenmachine</a> 
+				<a href="restservices/countries">les 3 practicum 2, URI 1, Een lijst (array) van alle landen waar informatie van is</a> 
+				<a href="restservices/countries/CN">les 3 practicum 2, URI 2, Landinformatie (op basis van landcode)</a> 
+				<a href="restservices/countries/largestsurfaces">les 3 practicum 2, URI 3, Een lijst (array) met de 10 grootste landen, gemeten naar oppervlakte</a> 
+				<a href="restservices/countries/largestpopulations">les 3 practicum 2, URI 4, Een array met de 10 grootste landen, gemeten naar inwoneraantal</a> 
+				<a href="rekenmachine2.html">Les 4, practicum 3, rekenmachine</a> 
+				<a href="weer.html">Les 5, practicum: openweathermap, ip-api & worldresources</a>
+				<a href="les6practicum2.html">Les 6, practicum 2,3 en 4 (localStorage en CSS)</a>
+				<a href="restservices/countries">les 7 practicum 3, URI 1, Een lijst (array) van alle landen waar informatie van is</a> 
+				<a href="restservices/countries/CN">les 7 practicum 3, URI 2, Landinformatie (op basis van landcode)</a> 
+				<a href="restservices/countries/largestsurfaces">les 7 practicum 3, URI 3, Een lijst (array) met de 10 grootste landen, gemeten naar oppervlakte</a> 
+				<a href="restservices/countries/largestpopulations">les 7 practicum 3, URI 4, Een array met de 10 grootste landen, gemeten naar inwoneraantal</a> 
+				<a href="les8practicum1.html">Les 8, practicum 1, RESTFUL WEBSERVICES & RELATIONAL DATABASES</a>
+				<a href="les9practicum2.html">Les 9, practicum 2, PRACTICUM: AUTHENTICATION, AUTHORIZATION & HTTPS</a>
+		
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		function menu() {
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		window.onclick = function(event) {
+			if (!event.target.matches('.dropbtn')) {
+
+				var dropdowns = document
+						.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>
